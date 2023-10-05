@@ -1,0 +1,30 @@
+#服务器端口号
+server:
+  port: 9000
+
+#spring配置
+spring:
+  #jdc配置
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/ssm?serverTimezone=UTC
+    username: root
+    password: 123456
+  main:
+      banner-mode: off #关闭SpringBoot的Banner
+
+#mp配置
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启mp日志(输出到控制台)
+  global-config:
+    banner: false #关闭MP的 Banner
+    db-config:
+      id-type: assign_id          #配置id全局策略
+      logic-delete-field: deleted #设置逻辑删除字段为 deleted, 标记数据是否被删除
+      logic-not-delete-value: 0   #没有删除为 0
+      logic-delete-value: 1       #删除为 1
+#      table-prefix: tbl_   实体类名和数据库表名不一致, 给所有实体类添加前缀
+
+
+
