@@ -48,8 +48,8 @@ class UserTest {
 //        userDao.updateById(user);
 
         //模拟多个用户操作数据
-        User userA = userDao.selectById(0);;   //A用户 version = 1
-        User userB = userDao.selectById(0);;   //B用户 version = 1
+        User userA = userDao.selectById(0);   //A用户 version = 1
+        User userB = userDao.selectById(0);   //B用户 version = 1
 
         //此时两位用户的version都是 1
         userA.setName("Ivor a");
